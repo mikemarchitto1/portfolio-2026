@@ -1,126 +1,77 @@
-import Image from "next/image";
 import Link from "next/link";
-import Container from "@/components/layout/container";
+import { Container } from "@/components/layout/container";
 
 const FOOTER_LINKS = {
   contact: {
-    email: "mikemarchitto@gmail.com",
-    phone: "312-879-908zero",
+    email: "michael.marchitto@gmail.com",
+    phone: "212-678-8380",
   },
-  follow: {
-    behance: "https://behance.net",
-    linkedin: "https://linkedin.com",
-  },
-  office: {
-    primary: "Brickell",
-    secondary: "Miami, Florida",
-  },
+  follow: [{ label: "LinkedIn", href: "https://linkedin.com" }],
+  office: { primary: "NY", secondary: "Miami, Florida" },
 };
 
-export default function Footer() {
+export function Footer() {
   return (
-    <footer className="w-full bg-white dark:bg-black border-t border-black/10 dark:border-white/10">
-      <Container className="py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-          {/* LEFT COLUMN */}
-          <div className="flex flex-col gap-8">
-            <div className="relative w-full max-w-[460px] aspect-[4/3]">
-              <Image
-                src="/images/desktop_connect.png"
-                alt="Michael Marchitto"
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <p className="text-[16px] leading-[24px] italic text-black/80 dark:text-white/80">
-                &quot;Live the questions now, and someday you will live your way into the answers.&quot;
-              </p>
-              <p className="text-[14px] leading-[20px] text-black/60 dark:text-white/60">
-                — Rainer Maria Rilke
-              </p>
-            </div>
+    <footer
+      id="connect"
+      className="bg-portfolio-blue py-16 text-portfolio-white md:py-20"
+    >
+      <Container as="footer">
+        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12">
+          <div className="flex items-start gap-4">
+            <div
+              className="h-12 w-12 flex-shrink-0 bg-portfolio-white/20"
+              aria-hidden
+            />
+            <p className="text-xl font-bold leading-tight md:text-2xl">
+              Let&apos;s Build Experiences. Together.
+            </p>
           </div>
 
-          {/* RIGHT COLUMN */}
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-[40px] md:text-[48px] leading-[48px] md:leading-[56px] font-normal text-black dark:text-white">
-                Thanks for visiting.
-              </h2>
-
-              <div className="flex flex-col gap-4 text-[16px] leading-[24px] text-black/70 dark:text-white/70">
-                <p>
-                  I&apos;d love to hear what you&apos;re working on—whether it&apos;s a new product, a design challenge, or something unexpected. I&apos;m always open to good conversations and creative collaborations.
-                </p>
-                <p>
-                  If you&apos;re in Miami, let&apos;s grab a coffee or go for a bike ride. I&apos;m usually somewhere between Brickell and the beach, exploring the city, checking out new spots, and taking it in.
-                </p>
-              </div>
+          <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 md:gap-16">
+            <div>
+              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+                Contact
+              </h3>
+              <a
+                href={`mailto:${FOOTER_LINKS.contact.email}`}
+                className="block text-portfolio-white/90 hover:underline"
+              >
+                {FOOTER_LINKS.contact.email}
+              </a>
+              <a
+                href={`tel:${FOOTER_LINKS.contact.phone.replace(/-/g, "")}`}
+                className="mt-1 block text-portfolio-white/90 hover:underline"
+              >
+                {FOOTER_LINKS.contact.phone}
+              </a>
             </div>
-
-            {/* GRID: CONTACT / FOLLOW / OFFICE */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              
-              {/* CONTACT */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Contact
-                </h3>
-
-                <a
-                  href={`mailto:${FOOTER_LINKS.contact.email}`}
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  {FOOTER_LINKS.contact.email}
-                </a>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.contact.phone}
-                </span>
-              </div>
-
-              {/* FOLLOW */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Follow
-                </h3>
-
+            <div>
+              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+                Follow
+              </h3>
+              {FOOTER_LINKS.follow.map(({ label, href }) => (
                 <Link
-                  href={FOOTER_LINKS.follow.behance}
+                  key={href}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                  className="block text-portfolio-white/90 hover:underline"
                 >
-                  Behance
+                  {label}
                 </Link>
-
-                <Link
-                  href={FOOTER_LINKS.follow.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  LinkedIn
-                </Link>
-              </div>
-
-              {/* OFFICE */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Remote Office
-                </h3>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.office.primary}
-                </span>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.office.secondary}
-                </span>
-              </div>
-
+              ))}
+            </div>
+            <div>
+              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+                Remote Office
+              </h3>
+              <p className="text-portfolio-white/90">
+                {FOOTER_LINKS.office.primary}
+              </p>
+              <p className="text-portfolio-white/90">
+                {FOOTER_LINKS.office.secondary}
+              </p>
             </div>
           </div>
         </div>

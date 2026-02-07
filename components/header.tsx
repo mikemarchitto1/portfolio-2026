@@ -3,73 +3,84 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import Container from "@/components/layout/container";
+import { Container } from "@/components/layout/container";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Connect", href: "#connect" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#connect", label: "Connect" },
 ];
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white text-black dark:bg-black dark:text-white border-b border-black/10 dark:border-white/10">
-      <Container className="py-6">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo_slogan.png"
-              alt="Michael Marchitto Product Design logo"
-              width={180}
-              height={40}
-              className="h-auto w-[180px]"
-              priority
-            />
-          </Link>
+    <header className="bg-portfolio-white py-6 md:py-8">
+      <Container
+        innerClassName="flex w-full items-center justify-between"
+      >
+        <Link
+          href="/"
+          className="flex flex-shrink-0 items-center text-portfolio-black no-underline"
+          aria-label="Michael Marchitto Product Design - Home"
+        >
+          <Image
+            src="/images/logo_mmpd.png"
+            alt=""
+            width={210}
+            height={48}
+            className="h-10 w-auto flex-shrink-0 object-contain md:h-12"
+            priority
+          />
+        </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map(({ label, href }) => (
+        <div className="flex flex-shrink-0 items-center justify-end">
+          <nav
+            className="hidden items-center gap-8 md:flex"
+            aria-label="Main navigation"
+          >
+            {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-[16px] leading-[24px] tracking-[0px] hover:opacity-70 transition-opacity"
+                className="text-sm font-medium text-portfolio-black hover:underline"
               >
                 {label}
               </Link>
             ))}
           </nav>
-
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            type="button"
+            className="flex h-10 w-10 items-center justify-center text-portfolio-black md:hidden"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {open ? <X size={28} /> : <Menu size={28} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+      </Container>
 
-        {/* Mobile Menu */}
-        {open && (
-          <nav className="mt-6 flex flex-col gap-6 md:hidden">
-            {NAV_LINKS.map(({ label, href }) => (
+      {mobileMenuOpen && (
+        <div className="border-t border-portfolio-black/10 bg-portfolio-white px-4 py-6 md:hidden">
+          <nav
+            className="flex flex-col gap-4"
+            aria-label="Main navigation"
+          >
+            {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                onClick={() => setOpen(false)}
-                className="text-[18px] leading-[28px] tracking-[0px] hover:opacity-70 transition-opacity"
+                className="text-base font-medium text-portfolio-black"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {label}
               </Link>
             ))}
           </nav>
-        )}
-      </Container>
+        </div>
+      )}
     </header>
   );
 }

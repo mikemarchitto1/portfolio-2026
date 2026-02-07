@@ -1,65 +1,33 @@
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-export default function Grid() {
+interface GridProps {
+  children: React.ReactNode;
+  className?: string;
+  /** Desktop: 12 columns, 48px gutter. Mobile: 4 columns, 16px gutter. */
+  cols?: 12 | 4;
+}
+
+export function Grid({ children, className, cols = 12 }: GridProps) {
   return (
-    <section
-      id="work"
-      className="w-full bg-white text-black dark:bg-black dark:text-white"
+    <div
+      className={cn(
+        "grid gap-4 md:gap-12",
+        cols === 4 && "grid-cols-4",
+        cols === 12 && "md:grid-cols-12",
+        className
+      )}
     >
-      <div className="mx-auto max-w-[1200px] px-4 py-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        
-        {/* Example Project Card 1 */}
-        <div className="flex flex-col gap-4">
-          <Image
-            src="/images/project_placeholder.png"
-            alt="Project preview"
-            width={600}
-            height={400}
-            className="w-full h-auto rounded-lg border border-black/10 dark:border-white/10"
-          />
-          <h3 className="text-[20px] leading-[28px] font-semibold">
-            Project Title
-          </h3>
-          <p className="text-[16px] leading-[24px] text-black/70 dark:text-white/70">
-            Short description of the project goes here.
-          </p>
-        </div>
-
-        {/* Example Project Card 2 */}
-        <div className="flex flex-col gap-4">
-          <Image
-            src="/images/project_placeholder.png"
-            alt="Project preview"
-            width={600}
-            height={400}
-            className="w-full h-auto rounded-lg border border-black/10 dark:border-white/10"
-          />
-          <h3 className="text-[20px] leading-[28px] font-semibold">
-            Project Title
-          </h3>
-          <p className="text-[16px] leading-[24px] text-black/70 dark:text-white/70">
-            Short description of the project goes here.
-          </p>
-        </div>
-
-        {/* Example Project Card 3 */}
-        <div className="flex flex-col gap-4">
-          <Image
-            src="/images/project_placeholder.png"
-            alt="Project preview"
-            width={600}
-            height={400}
-            className="w-full h-auto rounded-lg border border-black/10 dark:border-white/10"
-          />
-          <h3 className="text-[20px] leading-[28px] font-semibold">
-            Project Title
-          </h3>
-          <p className="text-[16px] leading-[24px] text-black/70 dark:text-white/70">
-            Short description of the project goes here.
-          </p>
-        </div>
-
-      </div>
-    </section>
+      {children}
+    </div>
   );
+}
+
+interface GridItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+/** Use className for span, e.g. "col-span-4 md:col-span-6" or "col-span-4 md:col-span-12". */
+export function GridItem({ children, className }: GridItemProps) {
+  return <div className={cn(className)}>{children}</div>;
 }

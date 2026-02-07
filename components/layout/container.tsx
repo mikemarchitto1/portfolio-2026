@@ -1,35 +1,35 @@
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface ContainerProps {
   children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
   className?: string;
+  /** Applied to the inner max-width wrapper (for flex/grid on the content row). */
   innerClassName?: string;
-  fullBleed?: boolean;
+  as?: "div" | "main" | "section" | "header" | "footer";
 }
 
-export default function Container({
+/**
+ * Layout container: 64px outer spacing (desktop), 16px (mobile).
+ * Inner content max-width 1328px. Aligns with 12-col / 4-col grid.
+ */
+export function Container({
   children,
-  as: Tag = "div",
   className,
   innerClassName,
-  fullBleed = false,
+  as: Component = "div",
 }: ContainerProps) {
   return (
-    <Tag
-      className={clsx(
-        fullBleed ? "w-full" : "w-full px-4",
+    <Component
+      className={cn(
+        "w-full px-4 md:px-16",
+        "[padding-left:max(16px,env(safe-area-inset-left))] [padding-right:max(16px,env(safe-area-inset-right))]",
+        "md:[padding-left:max(64px,env(safe-area-inset-left))] md:[padding-right:max(64px,env(safe-area-inset-right))]",
         className
       )}
     >
-      <div
-        className={clsx(
-          "mx-auto max-w-[1200px]",
-          innerClassName
-        )}
-      >
+      <div className={cn("mx-auto max-w-[1328px]", innerClassName)}>
         {children}
       </div>
-    </Tag>
+    </Component>
   );
 }
