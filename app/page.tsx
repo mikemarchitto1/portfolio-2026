@@ -47,19 +47,19 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <section id="projects" className="bg-portfolio-white py-16">
+        <section id="projects" className="bg-portfolio-white">
           <Container>
-            {/* GloriFi - full width */}
+            {/* GloriFi - full width, 64px margin all sides = 128px gap to adjacent */}
             <div className="my-16">
               <ProjectCard {...glorifi} />
             </div>
 
-            {/* Microsoft HITS + Eddie Bauer - side by side on desktop, stacked on mobile */}
-            <div className="grid grid-cols-4 gap-4 md:grid-cols-12 md:gap-12">
-              <div className="col-span-4 my-16 md:col-span-6">
+            {/* Microsoft HITS + Eddie Bauer - 128px gap, equal width within 1200px */}
+            <div className="flex flex-col gap-4 md:flex-row md:gap-[128px]">
+              <div className="my-16 min-w-0 flex-1">
                 <ProjectCard {...microsoft} />
               </div>
-              <div className="col-span-4 my-16 md:col-span-6">
+              <div className="my-16 min-w-0 flex-1">
                 <ProjectCard {...eddie} />
               </div>
             </div>

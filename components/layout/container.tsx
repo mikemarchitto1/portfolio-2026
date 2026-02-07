@@ -10,7 +10,7 @@ interface ContainerProps {
 
 /**
  * Layout container: 64px outer spacing (desktop), 16px (mobile).
- * Inner content max-width 1328px. Aligns with 12-col / 4-col grid.
+ * Inner content max-width 1200px.
  */
 export function Container({
   children,
@@ -27,7 +27,7 @@ export function Container({
         className
       )}
     >
-      <div className={cn("mx-auto max-w-[1328px]", innerClassName)}>
+      <div className={cn("mx-auto w-full max-w-[1200px]", innerClassName)}>
         {children}
       </div>
     </Component>

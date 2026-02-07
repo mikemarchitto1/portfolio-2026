@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer
       id="connect"
-      className="bg-portfolio-blue py-16 text-portfolio-white md:py-20"
+      className="bg-portfolio-blue py-16 text-portfolio-white"
     >
       <Container as="footer">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12">
