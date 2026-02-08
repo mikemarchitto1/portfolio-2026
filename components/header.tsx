@@ -35,7 +35,7 @@ export function Header() {
           />
         </Link>
 
-        <div className="flex flex-shrink-0 items-center justify-end">
+        <div className="mt-4 flex flex-shrink-0 items-center justify-end">
           <nav
             className="hidden items-center gap-8 md:flex"
             aria-label="Main navigation"
