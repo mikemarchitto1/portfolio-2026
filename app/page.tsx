@@ -49,8 +49,8 @@ export default function Home() {
         <Hero />
         <section id="projects" className="bg-portfolio-white">
           <Container>
-            {/* GloriFi - full width, 64px margin all sides = 128px gap to adjacent */}
-            <div className="my-16">
+            {/* GloriFi - no top margin (hero owns 128px gap); 64px bottom for next row */}
+            <div className="mb-16 mt-0">
               <ProjectCard {...glorifi} />
             </div>
 
@@ -64,8 +64,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Silverback MMA - full width */}
-            <div className="my-16">
+            {/* Silverback MMA - full width; mb-32 (128px) matches hero-to-image gap above footer */}
+            <div className="mb-32 mt-16">
               <ProjectCard {...silverback} />
             </div>
           </Container>

@@ -16,7 +16,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="mb-16 bg-portfolio-white py-16">
+    <header className="mb-32 bg-portfolio-white pt-16 pb-0">
       <Container
         innerClassName="flex w-full items-center justify-between"
       >

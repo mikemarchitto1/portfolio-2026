@@ -1,53 +1,57 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
 
 const FOOTER_LINKS = {
   contact: {
-    email: "michael.marchitto@gmail.com",
-    phone: "212-678-8380",
+    email: "mikemarchitto@gmail.com",
+    phone: "312-879-908zero",
   },
-  follow: [{ label: "LinkedIn", href: "https://linkedin.com" }],
-  office: { primary: "NY", secondary: "Miami, Florida" },
+  follow: [
+    { label: "Behance", href: "https://behance.net" },
+    { label: "LinkedIn", href: "https://linkedin.com" },
+  ],
+  office: { primary: "Brickell", secondary: "Miami, Florida" },
 };
 
 export function Footer() {
   return (
     <footer
       id="connect"
-      className="bg-portfolio-blue py-16 text-portfolio-white"
+      className="h-[600px] w-full pt-16 bg-portfolio-blue text-portfolio-white"
     >
-      <Container as="footer">
-        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12">
-          <div className="flex items-start gap-4">
-            <div
-              className="h-12 w-12 flex-shrink-0 bg-portfolio-white/20"
-              aria-hidden
+      <Container>
+        <div className="flex flex-col gap-12 md:flex-row md:flex-nowrap md:items-center md:justify-between md:gap-16">
+          {/* Logo: fixed 324×60 at all breakpoints */}
+          <div className="flex shrink-0 items-center">
+            <Image
+              src="/images/logo_slogan.png"
+              alt="Let's Build Experiences. Together."
+              width={324}
+              height={60}
+              priority={false}
+              style={{ width: 324, height: 60 }}
             />
-            <p className="text-xl font-bold leading-tight md:text-2xl">
-              Let&apos;s Build Experiences. Together.
-            </p>
           </div>
 
-          <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 md:gap-16">
+          {/* Contact, Follow, Remote Office - right side of wrapper, same row as logo on desktop */}
+          <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-16">
             <div>
-              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+              <h3 className="mb-2 text-sm font-semibold text-portfolio-white">
                 Contact
               </h3>
               <a
                 href={`mailto:${FOOTER_LINKS.contact.email}`}
-                className="block text-portfolio-white/90 hover:underline"
+                className="block text-sm font-normal text-portfolio-white/90 hover:underline"
               >
                 {FOOTER_LINKS.contact.email}
               </a>
-              <a
-                href={`tel:${FOOTER_LINKS.contact.phone.replace(/-/g, "")}`}
-                className="mt-1 block text-portfolio-white/90 hover:underline"
-              >
+              <span className="mt-1 block text-sm font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.contact.phone}
-              </a>
+              </span>
             </div>
             <div>
-              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+              <h3 className="mb-2 text-sm font-semibold text-portfolio-white">
                 Follow
               </h3>
               {FOOTER_LINKS.follow.map(({ label, href }) => (
@@ -56,20 +60,20 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-portfolio-white/90 hover:underline"
+                  className="block text-sm font-normal text-portfolio-white/90 hover:underline"
                 >
                   {label}
                 </Link>
               ))}
             </div>
             <div>
-              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
+              <h3 className="mb-2 text-sm font-semibold text-portfolio-white">
                 Remote Office
               </h3>
-              <p className="text-portfolio-white/90">
+              <p className="text-sm font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.office.primary}
               </p>
-              <p className="text-portfolio-white/90">
+              <p className="text-sm font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.office.secondary}
               </p>
             </div>
