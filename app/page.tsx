@@ -32,7 +32,7 @@ const PROJECTS = [
   {
     title: "Silverback MMA",
     description:
-      "Designed a full brand identity and website for a mixed martial arts training program.",
+      "Designed the full brand identity and website for a mixed martial arts training program, building a cohesive visual system and digital experience.",
     imageSrc: "/images/home_silverback.png",
     imageAlt: "Silverback MMA",
     variant: "large" as const,
