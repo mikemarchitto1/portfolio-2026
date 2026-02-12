@@ -17,9 +17,7 @@ export function Header() {
 
   return (
     <header className="mb-32 bg-portfolio-white pt-16 pb-0">
-      <Container
-        innerClassName="flex w-full items-center justify-between"
-      >
+      <Container innerClassName="flex w-full items-center justify-between">
         <Link
           href="/"
           className="flex flex-shrink-0 items-center text-portfolio-black no-underline"
@@ -28,16 +26,16 @@ export function Header() {
           <Image
             src="/images/logo_mmpd.png"
             alt=""
-            width={210}
-            height={48}
-            className="h-10 w-auto flex-shrink-0 object-contain md:h-12"
+            width={264}
+            height={64}
+            className="w-[264px] h-[64px] object-contain"
             priority
           />
         </Link>
 
-        <div className="mt-4 flex flex-shrink-0 items-center justify-end">
+        <div className="mt-4 mr-[40px] flex flex-shrink-0 items-center justify-end">
           <nav
-            className="hidden items-center gap-8 md:flex"
+            className="hidden items-center gap-12 md:flex relative top-[10px]"
             aria-label="Main navigation"
           >
             {NAV_LINKS.map(({ href, label }) => (
@@ -64,10 +62,7 @@ export function Header() {
 
       {mobileMenuOpen && (
         <div className="border-t border-portfolio-black/10 bg-portfolio-white px-4 py-6 md:hidden">
-          <nav
-            className="flex flex-col gap-4"
-            aria-label="Main navigation"
-          >
+          <nav className="flex flex-col gap-4" aria-label="Main navigation">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
