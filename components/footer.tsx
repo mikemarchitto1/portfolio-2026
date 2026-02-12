@@ -29,8 +29,9 @@ export function Footer() {
               alt="Let's Build Experiences. Together."
               width={324}
               height={60}
+              sizes="324px"
               priority={false}
-              style={{ width: 324, height: 60 }}
+              unoptimized
             />
           </div>
 

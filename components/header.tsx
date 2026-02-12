@@ -25,11 +25,12 @@ export function Header() {
         >
           <Image
             src="/images/logo_mmpd.png"
-            alt=""
+            alt="Michael Marchitto Product Design"
             width={264}
             height={64}
-            className="w-[264px] h-[64px] object-contain"
+            sizes="264px"
             priority
+            unoptimized
           />
         </Link>
 
