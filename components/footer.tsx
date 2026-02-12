@@ -35,9 +35,9 @@ export function Footer() {
           </div>
 
           {/* Contact, Follow, Remote Office - right side of wrapper, same row as logo on desktop */}
-          <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-12">
+          <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-12 relative top-[13px]">
             <div>
-              <h3 className="mb-1 text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Contact
               </h3>
 
@@ -48,12 +48,13 @@ export function Footer() {
                 {FOOTER_LINKS.contact.email}
               </a>
 
-              <span className="mt-1 block text-[16px] leading-[24px] font-normal text-portfolio-white/90">
+              <span className="block text-[16px] leading-[24px] font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.contact.phone}
               </span>
             </div>
+
             <div>
-              <h3 className="mb-1 text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Follow
               </h3>
 
@@ -71,7 +72,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-1 text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Remote Office
               </h3>
 

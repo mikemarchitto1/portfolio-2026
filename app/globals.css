@@ -148,10 +148,17 @@
 }
 
 @layer base {
+  /* Global reset for borders/outlines */
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* Global typography baseline + global Roboto */
+  html,
   body {
-    @apply bg-background text-foreground text-[16px] leading-[24px];
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    @apply bg-background text-foreground;
   }
 }

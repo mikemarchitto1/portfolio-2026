@@ -43,7 +43,7 @@ export default function Home() {
   const [glorifi, microsoft, eddie, silverback] = PROJECTS;
 
   return (
-    <div className="min-h-screen bg-portfolio-white font-sans text-portfolio-black">
+    <div className="min-h-screen bg-portfolio-white text-portfolio-black">
       <Header />
       <main>
         <Hero />
