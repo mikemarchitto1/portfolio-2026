@@ -6,8 +6,8 @@
 @theme inline {
   /* Portfolio palette */
   --color-portfolio-black: #000000;
-  --color-portfolio-blue: #264D99;
-  --color-portfolio-white: #FFFFFF;
+  --color-portfolio-blue: #264d99;
+  --color-portfolio-white: #ffffff;
   /* Layout & grid */
   --container-max: 1328px;
   --margin-desktop: 64px;
@@ -152,6 +152,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-[16px] leading-[24px];
   }
 }
