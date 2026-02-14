@@ -1,130 +1,164 @@
+"use client";
+
+import Header from "@/components/header";
+import Container from "@/components/container";
 import Image from "next/image";
-import Link from "next/link";
-import Container from "@/components/layout/container";
 
-const FOOTER_LINKS = {
-  contact: {
-    email: "mikemarchitto@gmail.com",
-    phone: "312-879-908zero",
-  },
-  follow: {
-    behance: "https://behance.net",
-    linkedin: "https://linkedin.com",
-  },
-  office: {
-    primary: "Brickell",
-    secondary: "Miami, Florida",
-  },
-};
-
-export default function Footer() {
+export default function ExperiencePage() {
   return (
-    <footer className="w-full bg-white dark:bg-black border-t border-black/10 dark:border-white/10">
-      <Container className="py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-          {/* LEFT COLUMN */}
-          <div className="flex flex-col gap-8">
-            <div className="relative w-full max-w-[460px] aspect-[4/3]">
-              <Image
-                src="/images/desktop_connect.png"
-                alt="Michael Marchitto"
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
+    <>
+      <Header />
 
-            <div className="flex flex-col gap-4">
-              <p className="text-[16px] leading-[24px] italic text-black/80 dark:text-white/80">
-                &quot;Live the questions now, and someday you will live your way into the answers.&quot;
-              </p>
-              <p className="text-[14px] leading-[20px] text-black/60 dark:text-white/60">
-                — Rainer Maria Rilke
-              </p>
-            </div>
+      {/* HERO SECTION */}
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20 mb-24">
+          <div>
+            <h1 className="text-5xl font-semibold mb-6">Hello,</h1>
+            <p className="text-neutral-300 leading-relaxed mb-6">
+              I’m Michael Marchitto — a product designer with roots in graphic
+              design, a move to Seattle that reshaped my career, and a decade of
+              building digital experiences with clarity, intention, and
+              operational rigor.
+            </p>
+
+            <p className="text-neutral-400 italic">
+              “A king is a man who turns hope into action.” — Ralph Waldo
+              Emerson
+            </p>
           </div>
 
-          {/* RIGHT COLUMN */}
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-[40px] md:text-[48px] leading-[48px] md:leading-[56px] font-normal text-black dark:text-white">
-                Thanks for visiting.
-              </h2>
-
-              <div className="flex flex-col gap-4 text-[16px] leading-[24px] text-black/70 dark:text-white/70">
-                <p>
-                  I&apos;d love to hear what you&apos;re working on—whether it&apos;s a new product, a design challenge, or something unexpected. I&apos;m always open to good conversations and creative collaborations.
-                </p>
-                <p>
-                  If you&apos;re in Miami, let&apos;s grab a coffee or go for a bike ride. I&apos;m usually somewhere between Brickell and the beach, exploring the city, checking out new spots, and taking it in.
-                </p>
-              </div>
-            </div>
-
-            {/* GRID: CONTACT / FOLLOW / OFFICE */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              
-              {/* CONTACT */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Contact
-                </h3>
-
-                <a
-                  href={`mailto:${FOOTER_LINKS.contact.email}`}
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  {FOOTER_LINKS.contact.email}
-                </a>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.contact.phone}
-                </span>
-              </div>
-
-              {/* FOLLOW */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Follow
-                </h3>
-
-                <Link
-                  href={FOOTER_LINKS.follow.behance}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  Behance
-                </Link>
-
-                <Link
-                  href={FOOTER_LINKS.follow.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[14px] leading-[20px] text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  LinkedIn
-                </Link>
-              </div>
-
-              {/* OFFICE */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[14px] leading-[20px] font-semibold text-black dark:text-white">
-                  Remote Office
-                </h3>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.office.primary}
-                </span>
-
-                <span className="text-[14px] leading-[20px] text-black/70 dark:text-white/70">
-                  {FOOTER_LINKS.office.secondary}
-                </span>
-              </div>
-
-            </div>
+          <div className="flex justify-center md:justify-end">
+            <Image
+              src="/images/profile_king.png"
+              alt="Michael wearing a crown"
+              width={360}
+              height={360}
+              className="rounded-lg"
+            />
           </div>
         </div>
       </Container>
-    </footer>
+
+      {/* EXPERIENCE SECTION */}
+      <Container>
+        <h2 className="text-4xl font-semibold mb-12">Experience</h2>
+
+        <div className="flex flex-col gap-16">
+          {[
+            {
+              title: "Michael Marchitto Product Design",
+              period: "April 2025 – Present",
+              description:
+                "Independent product design practice focused on systems, workflows, and digital experiences built with clarity and operational rigor.",
+            },
+            {
+              title: "National Restaurant Association",
+              period: "June 2024 – March 2025",
+              description:
+                "Led product design across enterprise tools, analytics dashboards, and operational workflows for national food‑service organizations.",
+            },
+            {
+              title: "Microsoft — Admin Center Software",
+              period: "June 2023 – February 2024",
+              description:
+                "Designed admin experiences, system controls, and scalable UI patterns for enterprise management tools.",
+            },
+            {
+              title: "GloriFi",
+              period: "November 2021 – February 2023",
+              description:
+                "Built financial product experiences, design systems, and cross‑platform UI for a high‑growth fintech startup.",
+            },
+            {
+              title: "Remitly",
+              period: "January 2020 – April 2021",
+              description:
+                "Designed customer‑facing flows, onboarding, and mobile experiences for global money transfer products.",
+            },
+            {
+              title: "Microsoft — HITS Software",
+              period: "April 2019 – December 2019",
+              description:
+                "Worked on internal tooling, workflow optimization, and UI improvements for enterprise software teams.",
+            },
+            {
+              title: "Mentor Creative Group",
+              period: "June 2018 – January 2019",
+              description:
+                "Supported branding, web design, and digital creative for a range of client projects.",
+            },
+          ].map((job, i) => (
+            <div key={i} className="border-b border-neutral-800 pb-10">
+              <h3 className="text-2xl font-semibold">{job.title}</h3>
+              <p className="text-neutral-500 text-sm mb-4">{job.period}</p>
+              <p className="text-neutral-300 leading-relaxed">
+                {job.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12">
+          <a
+            href="/resume.pdf"
+            className="inline-block border border-neutral-700 px-6 py-3 rounded-md hover:bg-neutral-800 transition"
+          >
+            Download my resume
+          </a>
+        </div>
+      </Container>
+
+      {/* PROFILE SECTION */}
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-24 mb-32">
+          {/* SKILLS */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Skills</h3>
+            <ul className="text-neutral-300 space-y-2">
+              <li>Accessibility</li>
+              <li>AI Agent Design</li>
+              <li>Analytics</li>
+              <li>Design Systems</li>
+              <li>Interaction Design</li>
+              <li>Information Architecture</li>
+              <li>Product Strategy</li>
+              <li>Prototyping</li>
+              <li>Research</li>
+              <li>UX Writing</li>
+            </ul>
+          </div>
+
+          {/* TOOLS */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Tools</h3>
+            <ul className="text-neutral-300 space-y-2">
+              <li>Adobe</li>
+              <li>Cursor</li>
+              <li>CSS / HTML</li>
+              <li>Figma</li>
+              <li>GitHub</li>
+              <li>Google Material</li>
+              <li>Jira</li>
+              <li>Trello</li>
+              <li>Asana</li>
+              <li>Microsoft Fluent</li>
+              <li>OpenAI</li>
+              <li>Webflow</li>
+            </ul>
+          </div>
+
+          {/* EDUCATION */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Education</h3>
+            <ul className="text-neutral-300 space-y-4">
+              <li>Board Infinity — AI Integrated Design</li>
+              <li>Google Career — UX Design</li>
+              <li>Seattle Central College — Web Design</li>
+              <li>University of Illinois at Chicago — Graphic Design</li>
+            </ul>
+          </div>
+        </div>
+      </Container>
+    </>
   );
 }

@@ -12,7 +12,7 @@ interface ContainerProps {
  * Layout container: 64px outer spacing (desktop), 16px (mobile).
  * Inner content max-width 1200px.
  */
-export function Container({
+export default function Container({
   children,
   className,
   innerClassName,
@@ -24,7 +24,7 @@ export function Container({
         "w-full px-4 md:px-16",
         "[padding-left:max(16px,env(safe-area-inset-left))] [padding-right:max(16px,env(safe-area-inset-right))]",
         "md:[padding-left:max(64px,env(safe-area-inset-left))] md:[padding-right:max(64px,env(safe-area-inset-right))]",
-        className
+        className,
       )}
     >
       <div className={cn("mx-auto w-full max-w-[1200px]", innerClassName)}>

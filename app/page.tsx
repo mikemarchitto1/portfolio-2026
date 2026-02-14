@@ -1,8 +1,8 @@
-import { Header } from "@/components/header";
-import { Hero } from "@/components/hero";
-import { ProjectCard } from "@/components/project-card";
-import { Footer } from "@/components/footer";
-import { Container } from "@/components/layout/container";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import ProjectCard from "@/components/project-card";
+import Footer from "@/components/footer";
+import Container from "@/components/container";
 
 const PROJECTS = [
   {
@@ -49,12 +49,12 @@ export default function Home() {
         <Hero />
         <section id="projects" className="bg-portfolio-white">
           <Container>
-            {/* GloriFi - no top margin (hero owns 128px gap); 64px bottom for next row */}
+            {/* GloriFi */}
             <div className="mb-16 mt-0">
               <ProjectCard {...glorifi} />
             </div>
 
-            {/* Microsoft HITS + Eddie Bauer - 128px gap, equal width within 1200px */}
+            {/* Microsoft HITS + Eddie Bauer */}
             <div className="flex flex-col gap-4 md:flex-row md:gap-[128px]">
               <div className="my-16 min-w-0 flex-1">
                 <ProjectCard {...microsoft} />
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Silverback MMA - full width; mb-32 (128px) matches hero-to-image gap above footer */}
+            {/* Silverback MMA */}
             <div className="mb-32 mt-16">
               <ProjectCard {...silverback} />
             </div>

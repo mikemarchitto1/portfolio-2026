@@ -11,7 +11,7 @@ export interface ProjectCardProps {
   href?: string;
 }
 
-export function ProjectCard({
+export default function ProjectCard({
   title,
   description,
   imageSrc,
@@ -35,20 +35,22 @@ export function ProjectCard({
           }
         />
       </div>
+
       <div
         className={cn(
           "flex flex-col gap-2 pt-4",
           variant === "large" &&
-            "md:flex-row md:items-start md:justify-between md:gap-12 md:pt-6"
+            "md:flex-row md:items-start md:justify-between md:gap-12 md:pt-6",
         )}
       >
         <h2 className="text-left text-portfolio-black [font-family:var(--font-roboto)] text-[24px] font-normal leading-[32px] tracking-[0.0025em] md:text-[34px] md:leading-[48px]">
           {title}
         </h2>
+
         <p
           className={cn(
             "text-left text-[16px] font-normal leading-[24px] text-portfolio-black/80 [font-family:var(--font-roboto)]",
-            variant === "large" && "md:max-w-[60%]"
+            variant === "large" && "md:max-w-[60%]",
           )}
         >
           {description}

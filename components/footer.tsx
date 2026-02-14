@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "@/components/layout/container";
+import Container from "@/components/container";
 
 const FOOTER_LINKS = {
   contact: {
@@ -14,7 +14,7 @@ const FOOTER_LINKS = {
   office: { primary: "Brickell", secondary: "Miami, Florida" },
 };
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer
       id="connect"
@@ -35,7 +35,7 @@ export function Footer() {
             />
           </div>
 
-          {/* Contact, Follow, Remote Office - right side of wrapper, same row as logo on desktop */}
+          {/* Contact, Follow, Remote Office */}
           <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-12 relative top-[13px]">
             <div>
               <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">

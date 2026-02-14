@@ -1,6 +1,6 @@
-import { Container } from "@/components/layout/container";
+import Container from "@/components/container";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className="bg-portfolio-white">
       <Container>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Container } from "@/components/layout/container";
+import Container from "@/components/container";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { href: "/#connect", label: "Connect" },
 ];
 
-export function Header() {
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
