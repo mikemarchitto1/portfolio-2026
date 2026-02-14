@@ -18,11 +18,10 @@ export default function Footer() {
   return (
     <footer
       id="connect"
-      className="h-[600px] w-full pt-16 bg-portfolio-blue text-portfolio-white"
+      className="w-full h-[600px] pt-14 pb-16 bg-portfolio-blue text-portfolio-white"
     >
       <Container>
         <div className="flex flex-col gap-12 md:flex-row md:flex-nowrap md:items-center md:justify-between md:gap-16">
-          {/* Logo: fixed 324×60 at all breakpoints */}
           <div className="flex shrink-0 items-center">
             <Image
               src="/images/logo_slogan.png"
@@ -35,20 +34,17 @@ export default function Footer() {
             />
           </div>
 
-          {/* Contact, Follow, Remote Office */}
           <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-12 relative top-[13px]">
             <div>
               <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Contact
               </h3>
-
               <a
                 href={`mailto:${FOOTER_LINKS.contact.email}`}
                 className="block text-[16px] leading-[24px] font-normal text-portfolio-white/90 hover:underline"
               >
                 {FOOTER_LINKS.contact.email}
               </a>
-
               <span className="block text-[16px] leading-[24px] font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.contact.phone}
               </span>
@@ -58,7 +54,6 @@ export default function Footer() {
               <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Follow
               </h3>
-
               {FOOTER_LINKS.follow.map(({ label, href }) => (
                 <Link
                   key={href}
@@ -76,11 +71,9 @@ export default function Footer() {
               <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Remote Office
               </h3>
-
               <p className="text-[16px] leading-[24px] font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.office.primary}
               </p>
-
               <p className="text-[16px] leading-[24px] font-normal text-portfolio-white/90">
                 {FOOTER_LINKS.office.secondary}
               </p>

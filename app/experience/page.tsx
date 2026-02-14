@@ -1,8 +1,9 @@
 "use client";
 
 import Header from "@/components/header";
-import Container from "@/components/container";
+import Footer from "@/components/footer";
 import Image from "next/image";
+import Container from "@/components/container";
 
 export default function ExperiencePage() {
   return (
@@ -11,154 +12,217 @@ export default function ExperiencePage() {
 
       {/* HERO SECTION */}
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-[128px] mt-20">
+          {/* LEFT COLUMN */}
           <div>
-            <h1 className="text-5xl font-semibold mb-6">Hello,</h1>
-            <p className="text-neutral-300 leading-relaxed mb-6">
-              I’m Michael Marchitto — a product designer with roots in graphic
-              design, a move to Seattle that reshaped my career, and a decade of
-              building digital experiences with clarity, intention, and
-              operational rigor.
+            <h1 className="text-[60px] leading-[76px] font-light tracking-[0.5%] text-black mb-6 font-['Roboto']">
+              Hello,
+            </h1>
+
+            <p className="leading-relaxed mb-6 text-black">
+              I’m originally from Chicago, where I studied graphic design at
+              UIC—a program rooted in Swiss and International design principles.
+              That foundation shaped my early work in marketing and
+              communications, where I developed a strong sense of visual design
+              and storytelling. I’ve always been drawn to typography, simple
+              communication, and design that feels useful.
             </p>
 
-            <p className="text-neutral-400 italic">
-              “A king is a man who turns hope into action.” — Ralph Waldo
-              Emerson
+            <p className="leading-relaxed mb-6 text-black">
+              After relocating to Seattle, I moved into UX, drawn to digital
+              design and the need for better product experiences. Over the
+              years, I’ve worked across corporations, agencies, and
+              startups—advocating for user‑centered design. I'm recently
+              exploring how AI is reshaping creative work through automation,
+              prototyping, and collaboration.
+            </p>
+
+            <p className="leading-relaxed mb-6 text-black">
+              Currently based in Miami, I’m a cyclist and outdoors enthusiast
+              who finds peace on the trail. Time outside helps reset and balance
+              my life. Whether riding through city streets or remote gravel
+              paths, I’m always looking for great scenic routes to the next bike
+              camping destination.
             </p>
           </div>
 
-          <div className="flex justify-center md:justify-end">
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col items-end">
             <Image
               src="/images/profile_king.png"
               alt="Michael wearing a crown"
-              width={360}
-              height={360}
-              className="rounded-lg"
+              width={800}
+              height={800}
+              className="w-full max-w-[600px] h-auto"
             />
+
+            <p className="mt-[24px] text-left text-black max-w-[600px] self-start">
+              <span className="italic block">
+                “A king is a man who turns hope into action.”
+              </span>
+              <span className="not-italic block mt-[13px]">
+                — Ralph Waldo Emerson
+              </span>
+            </p>
           </div>
         </div>
+
+        {/* SECTION GAP */}
+        <div className="mt-4 sm:mt-8 lg:mt-[128px]" />
       </Container>
 
-      {/* EXPERIENCE SECTION */}
+      {/* EXPERIENCE HEADER */}
       <Container>
-        <h2 className="text-4xl font-semibold mb-12">Experience</h2>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+          {/* BUTTON — MOBILE + TABLET ABOVE TITLE, DESKTOP RIGHT */}
+          <a
+            href="/resume.pdf"
+            className="
+              order-1 lg:order-2
+              inline-flex items-center justify-center
+              h-[48px] px-6
+              rounded-[6px]
+              bg-[#264D99] text-white
+              font-['Roboto'] text-[16px] leading-[24px] font-semibold tracking-[0.5%]
+              hover:opacity-90
 
-        <div className="flex flex-col gap-16">
+              w-full md:w-auto
+              self-center md:self-start lg:self-end
+
+              mb-4 sm:mb-8 md:mb-8 lg:mb-0
+            "
+          >
+            Download my resume
+          </a>
+
+          {/* EXPERIENCE TITLE */}
+          <h2
+            className="
+              order-2 lg:order-1
+              text-[60px] leading-[76px]
+              font-light tracking-[0.5%]
+              text-black font-['Roboto']
+            "
+          >
+            Experience
+          </h2>
+        </div>
+
+        {/* SECTION GAP */}
+        <div className="mt-4 sm:mt-8 lg:mt-[128px]" />
+      </Container>
+
+      {/* EXPERIENCE LIST */}
+      <Container>
+        <div className="w-full md:w-1/2 flex flex-col gap-[40px]">
           {[
             {
-              title: "Michael Marchitto Product Design",
               period: "April 2025 – Present",
+              title: "Michael Marchitto Product Design",
               description:
-                "Independent product design practice focused on systems, workflows, and digital experiences built with clarity and operational rigor.",
+                "Advancing UX practice through independent AI work, leveraging Cursor, OpenAI, and n8n to design RAG‑powered prototypes, intelligent agents, and automated workflows, while building a client base and applying user‑centered design principles.",
             },
             {
-              title: "National Restaurant Association",
               period: "June 2024 – March 2025",
+              title: "National Restaurant Association",
               description:
-                "Led product design across enterprise tools, analytics dashboards, and operational workflows for national food‑service organizations.",
+                "Designed digital platforms by conducting user research, applying interaction design and accessibility standards, creating wireframes and prototypes, and delivering a scalable design system to improve usability and team alignment.",
             },
             {
-              title: "Microsoft — Admin Center Software",
               period: "June 2023 – February 2024",
+              title: "Microsoft — Admin Center Software",
               description:
-                "Designed admin experiences, system controls, and scalable UI patterns for enterprise management tools.",
+                "Enhanced Microsoft Admin Center and enterprise cart functionality through end‑to‑end UX design: driving research, wireframes, prototypes, usability testing, and iterative collaboration with developers to optimize workflows.",
             },
             {
-              title: "GloriFi",
               period: "November 2021 – February 2023",
+              title: "GloriFi",
               description:
-                "Built financial product experiences, design systems, and cross‑platform UI for a high‑growth fintech startup.",
+                "Designed FinTech solutions by leading the UX process from wireframes and prototypes to hi‑fidelity screens, building a unified design system, and collaborating with developers in agile sprints to deliver scalable financial wellness tools.",
             },
             {
-              title: "Remitly",
               period: "January 2020 – April 2021",
+              title: "Remitly",
               description:
-                "Designed customer‑facing flows, onboarding, and mobile experiences for global money transfer products.",
+                "Improved engagement for a digital payments startup by applying responsive web design, refining interaction flows, and elevating visual content across web and email platforms, supported by usability testing and accessibility standards.",
             },
             {
-              title: "Microsoft — HITS Software",
               period: "April 2019 – December 2019",
+              title: "Microsoft — HITS Software",
               description:
-                "Worked on internal tooling, workflow optimization, and UI improvements for enterprise software teams.",
+                "Created Microsoft HITS (Human Interface Tracking System), an internal research repository software, by applying best practices across the full UX process including research, wireframes, prototypes, UI design, and agile handoff, ensuring alignment with development teams.",
             },
             {
-              title: "Mentor Creative Group",
               period: "June 2018 – January 2019",
+              title: "Mentor Creative Group",
               description:
-                "Supported branding, web design, and digital creative for a range of client projects.",
+                "Led the redesign of Eddie Bauer’s e‑commerce experience at a retail‑focused agency, creating custom iconography, product‑centered visuals, and a modern, intuitive shopping flow that elevated brand clarity and improved the overall customer journey.",
             },
           ].map((job, i) => (
-            <div key={i} className="border-b border-neutral-800 pb-10">
-              <h3 className="text-2xl font-semibold">{job.title}</h3>
-              <p className="text-neutral-500 text-sm mb-4">{job.period}</p>
-              <p className="text-neutral-300 leading-relaxed">
+            <div key={i}>
+              <p className="text-base font-medium text-black mb-[12px] pl-1">
+                {job.period}
+              </p>
+
+              <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
+                {job.title}
+              </h3>
+
+              <p className="leading-relaxed text-black mt-1">
                 {job.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12">
-          <a
-            href="/resume.pdf"
-            className="inline-block border border-neutral-700 px-6 py-3 rounded-md hover:bg-neutral-800 transition"
-          >
-            Download my resume
-          </a>
-        </div>
+        {/* SECTION GAP */}
+        <div className="mt-4 sm:mt-8 lg:mt-[128px]" />
       </Container>
 
       {/* PROFILE SECTION */}
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-24 mb-32">
-          {/* SKILLS */}
+        <div className="w-full md:w-1/2 flex flex-col gap-[40px]">
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Skills</h3>
-            <ul className="text-neutral-300 space-y-2">
-              <li>Accessibility</li>
-              <li>AI Agent Design</li>
-              <li>Analytics</li>
-              <li>Design Systems</li>
-              <li>Interaction Design</li>
-              <li>Information Architecture</li>
-              <li>Product Strategy</li>
-              <li>Prototyping</li>
-              <li>Research</li>
-              <li>UX Writing</li>
-            </ul>
+            <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
+              Skills
+            </h3>
+            <p className="leading-relaxed text-black mt-1">
+              Accessibility, AI Agent Design, Analytics, Design Systems, Design
+              Thinking, Information Architecture, Interaction Design, Mobile
+              Design, Problem Solving, Prototyping, RAG Pipelines, Responsive
+              Web, Stakeholder Engagement, Usability Testing, UX Design, UX
+              Research, Vibe Coding, Visual Design, Wireframing, Workflow
+              Automation
+            </p>
           </div>
 
-          {/* TOOLS */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Tools</h3>
-            <ul className="text-neutral-300 space-y-2">
-              <li>Adobe</li>
-              <li>Cursor</li>
-              <li>CSS / HTML</li>
-              <li>Figma</li>
-              <li>GitHub</li>
-              <li>Google Material</li>
-              <li>Jira</li>
-              <li>Trello</li>
-              <li>Asana</li>
-              <li>Microsoft Fluent</li>
-              <li>OpenAI</li>
-              <li>Webflow</li>
-            </ul>
+            <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
+              Tools
+            </h3>
+            <p className="leading-relaxed text-black mt-1">
+              Adobe, Cursor, CSS, HTML, Figma, GitHub, Google Material, Jira,
+              Trello, Asana, Microsoft Fluent, n8n, OpenAI, Webflow
+            </p>
           </div>
 
-          {/* EDUCATION */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Education</h3>
-            <ul className="text-neutral-300 space-y-4">
-              <li>Board Infinity — AI Integrated Design</li>
-              <li>Google Career — UX Design</li>
-              <li>Seattle Central College — Web Design</li>
-              <li>University of Illinois at Chicago — Graphic Design</li>
-            </ul>
+            <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
+              Education
+            </h3>
+            <p className="leading-relaxed text-black mt-1">
+              Board Infinity — AI Integrated Design, Google Career — UX Design,
+              Seattle Central College — Web Design, University of Illinois at
+              Chicago — Graphic Design
+            </p>
           </div>
         </div>
+
+        {/* SECTION GAP */}
+        <div className="mt-4 sm:mt-8 lg:mt-[128px]" />
       </Container>
+
+      <Footer />
     </>
   );
 }
