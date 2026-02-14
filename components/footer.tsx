@@ -21,7 +21,9 @@ export default function Footer() {
       className="w-full h-[600px] pt-14 pb-16 bg-portfolio-blue text-portfolio-white"
     >
       <Container>
-        <div className="flex flex-col gap-12 md:flex-row md:flex-nowrap md:items-center md:justify-between md:gap-16">
+        {/* CHANGE: md:flex-row → lg:flex-row so wrapping happens until 1024px */}
+        <div className="flex flex-col gap-12 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between lg:gap-16">
+          {/* LOGO */}
           <div className="flex shrink-0 items-center">
             <Image
               src="/images/logo_slogan.png"
@@ -34,7 +36,8 @@ export default function Footer() {
             />
           </div>
 
-          <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 md:gap-12 relative top-[13px]">
+          {/* MENU BLOCK */}
+          <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 lg:gap-12 relative top-[13px]">
             <div>
               <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
                 Contact
