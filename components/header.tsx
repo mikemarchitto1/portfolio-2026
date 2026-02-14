@@ -16,7 +16,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="py-[64px] bg-blue-200">
+    <header className="py-[56px]">
       <Container>
         <div className="flex w-full items-center justify-between px-[64px]">
           <Link href="/" className="flex items-center">

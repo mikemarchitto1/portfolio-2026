@@ -51,7 +51,7 @@ export default function Home() {
         {/* HERO — same wrapper pattern as projects */}
         <section>
           <Container>
-            <div className="bg-pink-200 p-[64px]">
+            <div className="p-[64px]">
               <Hero />
             </div>
           </Container>
@@ -61,23 +61,23 @@ export default function Home() {
         <section id="projects">
           <Container>
             {/* GloriFi */}
-            <div className="mt-0 bg-green-200 p-[64px]">
+            <div className="mt-0 p-[64px]">
               <ProjectCard {...glorifi} />
             </div>
 
             {/* Microsoft HITS + Eddie Bauer */}
             <div className="flex flex-col md:flex-row">
-              <div className="min-w-0 flex-1 bg-blue-200 p-[64px]">
+              <div className="min-w-0 flex-1 p-[64px]">
                 <ProjectCard {...microsoft} />
               </div>
 
-              <div className="min-w-0 flex-1 bg-purple-200 p-[64px]">
+              <div className="min-w-0 flex-1 p-[64px]">
                 <ProjectCard {...eddie} />
               </div>
             </div>
 
             {/* Silverback MMA */}
-            <div className="mt-0 bg-yellow-200 p-[64px]">
+            <div className="mt-0 p-[64px] mb-[64px]">
               <ProjectCard {...silverback} />
             </div>
           </Container>
