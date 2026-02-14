@@ -22,7 +22,7 @@ export default function Footer() {
     >
       <Container>
         {/* CHANGE: md:flex-row → lg:flex-row so wrapping happens until 1024px */}
-        <div className="flex flex-col gap-12 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between lg:gap-16">
+        <div className="flex flex-col gap-12 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between lg:gap-16 px-[64px]">
           {/* LOGO */}
           <div className="flex shrink-0 items-center">
             <Image

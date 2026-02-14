@@ -1,3 +1,4 @@
+// app/page.tsx (or wherever Home lives)
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import ProjectCard from "@/components/project-card";
@@ -45,32 +46,44 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-portfolio-white text-portfolio-black">
       <Header />
+
       <main>
-        <Hero />
-        <section id="projects" className="bg-portfolio-white">
+        {/* HERO — same wrapper pattern as projects */}
+        <section>
+          <Container>
+            <div className="bg-pink-200 p-[64px]">
+              <Hero />
+            </div>
+          </Container>
+        </section>
+
+        {/* PROJECTS */}
+        <section id="projects">
           <Container>
             {/* GloriFi */}
-            <div className="mb-16 mt-0">
+            <div className="mt-0 bg-green-200 p-[64px]">
               <ProjectCard {...glorifi} />
             </div>
 
             {/* Microsoft HITS + Eddie Bauer */}
-            <div className="flex flex-col gap-4 md:flex-row md:gap-[128px]">
-              <div className="my-16 min-w-0 flex-1">
+            <div className="flex flex-col md:flex-row">
+              <div className="min-w-0 flex-1 bg-blue-200 p-[64px]">
                 <ProjectCard {...microsoft} />
               </div>
-              <div className="my-16 min-w-0 flex-1">
+
+              <div className="min-w-0 flex-1 bg-purple-200 p-[64px]">
                 <ProjectCard {...eddie} />
               </div>
             </div>
 
             {/* Silverback MMA */}
-            <div className="mb-32 mt-16">
+            <div className="mt-0 bg-yellow-200 p-[64px]">
               <ProjectCard {...silverback} />
             </div>
           </Container>
         </section>
       </main>
+
       <Footer />
     </div>
   );
