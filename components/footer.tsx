@@ -18,11 +18,24 @@ export default function Footer() {
   return (
     <footer
       id="connect"
-      className="w-full h-[600px] pt-14 pb-16 bg-portfolio-blue text-portfolio-white"
+      className="
+        w-full 
+        h-[600px]
+        overflow-hidden
+        bg-portfolio-blue 
+        text-portfolio-white
+        pt-[16px] md:pt-[32px] lg:pt-[64px]
+        pb-[16px] md:pb-[32px] lg:pb-[64px]
+      "
     >
       <Container>
-        {/* CHANGE: md:flex-row → lg:flex-row so wrapping happens until 1024px */}
-        <div className="flex flex-col gap-12 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between lg:gap-16 px-[64px]">
+        <div
+          className="
+            flex flex-col gap-12 
+            lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between lg:gap-16
+            px-[16px] md:px-[32px] lg:px-[64px]
+          "
+        >
           {/* LOGO */}
           <div className="flex shrink-0 items-center">
             <Image
@@ -31,7 +44,6 @@ export default function Footer() {
               width={324}
               height={60}
               sizes="324px"
-              priority={false}
               unoptimized
             />
           </div>
@@ -39,7 +51,7 @@ export default function Footer() {
           {/* MENU BLOCK */}
           <div className="flex shrink-0 flex-col gap-8 sm:flex-row sm:gap-12 lg:gap-12 relative top-[13px]">
             <div>
-              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold">
                 Contact
               </h3>
               <a
@@ -54,7 +66,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold">
                 Follow
               </h3>
               {FOOTER_LINKS.follow.map(({ label, href }) => (
@@ -71,7 +83,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-[16px] leading-[24px] font-semibold text-portfolio-white">
+              <h3 className="text-[16px] leading-[24px] font-semibold">
                 Remote Office
               </h3>
               <p className="text-[16px] leading-[24px] font-normal text-portfolio-white/90">

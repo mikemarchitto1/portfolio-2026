@@ -1,4 +1,4 @@
-// app/page.tsx (or wherever Home lives)
+// app/page.tsx
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import ProjectCard from "@/components/project-card";
@@ -48,10 +48,10 @@ export default function Home() {
       <Header />
 
       <main>
-        {/* HERO — same wrapper pattern as projects */}
+        {/* HERO */}
         <section>
           <Container>
-            <div className="p-[64px]">
+            <div className="p-[16px] md:p-[32px] lg:p-[64px]">
               <Hero />
             </div>
           </Container>
@@ -61,23 +61,23 @@ export default function Home() {
         <section id="projects">
           <Container>
             {/* GloriFi */}
-            <div className="mt-0 p-[64px]">
+            <div className="mt-0 p-[16px] md:p-[32px] lg:p-[64px]">
               <ProjectCard {...glorifi} />
             </div>
 
             {/* Microsoft HITS + Eddie Bauer */}
             <div className="flex flex-col md:flex-row">
-              <div className="min-w-0 flex-1 p-[64px]">
+              <div className="min-w-0 flex-1 p-[16px] md:p-[32px] lg:p-[64px]">
                 <ProjectCard {...microsoft} />
               </div>
 
-              <div className="min-w-0 flex-1 p-[64px]">
+              <div className="min-w-0 flex-1 p-[16px] md:p-[32px] lg:p-[64px]">
                 <ProjectCard {...eddie} />
               </div>
             </div>
 
             {/* Silverback MMA */}
-            <div className="mt-0 p-[64px] mb-[64px]">
+            <div className="mt-0 p-[16px] md:p-[32px] lg:p-[64px] mb-[16px] md:mb-[32px] lg:mb-[64px]">
               <ProjectCard {...silverback} />
             </div>
           </Container>

@@ -18,11 +18,14 @@ export default function ExperiencePage() {
       {/* HERO SECTION */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="p-[64px] bg-yellow-200">
+          {/* LEFT HERO */}
+          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-yellow-200">
+            <Title>Hello,</Title>
             <ExperienceHeroLeft />
           </div>
 
-          <div className="p-[64px] bg-pink-200">
+          {/* RIGHT HERO */}
+          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-pink-200">
             <ExperienceHeroRight />
           </div>
         </div>
@@ -31,13 +34,13 @@ export default function ExperiencePage() {
       {/* EXPERIENCE + BUTTON SECTION */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* BUTTON */}
-          <div className="p-[64px] bg-green-200 md:order-2 flex justify-start md:justify-center">
+          {/* BUTTON — mobile above experience, desktop right */}
+          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-green-200 md:order-2 flex justify-start md:justify-center">
             <ExperienceResumeButton />
           </div>
 
           {/* EXPERIENCE */}
-          <div className="p-[64px] bg-blue-200 md:order-1">
+          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-blue-200 md:order-1">
             <Title>Experience</Title>
 
             <div className="mt-[40px] flex flex-col gap-[40px]">
@@ -86,15 +89,12 @@ export default function ExperiencePage() {
                 },
               ].map((job, i) => (
                 <div key={i}>
-                  <p className="text-base font-medium text-black mb-[12px]">
-                    {job.period}
-                  </p>
-                  <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
-                    {job.title}
-                  </h3>
-                  <p className="leading-relaxed text-black mt-1">
-                    {job.description}
-                  </p>
+                  <p className="font-medium mb-[12px]">{job.period}</p>
+
+                  {/* Responsive global h3 scale */}
+                  <h3 className="font-normal tracking-[0.25%]">{job.title}</h3>
+
+                  <p className="mt-1">{job.description}</p>
                 </div>
               ))}
             </div>
@@ -103,18 +103,23 @@ export default function ExperiencePage() {
       </Container>
 
       {/* EXPERTISE SECTION */}
-      <Container className="pb-0">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* LEFT COLUMN */}
-          <div className="p-[64px] bg-yellow-200">
+          {/* LEFT COLUMN — NO bottom padding */}
+          <div
+            className="
+            pt-[16px] md:pt-[32px] lg:pt-[64px]
+            px-[16px] md:px-[32px] lg:px-[64px]
+            pb-0
+            bg-yellow-200
+          "
+          >
             <Title>Expertise</Title>
 
             <div className="mt-[40px] flex flex-col gap-[40px]">
               <div>
-                <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
-                  Skills
-                </h3>
-                <p className="leading-relaxed text-black mt-1">
+                <h3 className="font-normal tracking-[0.25%]">Skills</h3>
+                <p className="mt-1">
                   Accessibility, AI Agent Design, Analytics, Design Systems,
                   Design Thinking, Information Architecture, Interaction Design,
                   Mobile Design, Problem Solving, Prototyping, RAG Pipelines,
@@ -125,20 +130,16 @@ export default function ExperiencePage() {
               </div>
 
               <div>
-                <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
-                  Tools
-                </h3>
-                <p className="leading-relaxed text-black mt-1">
+                <h3 className="font-normal tracking-[0.25%]">Tools</h3>
+                <p className="mt-1">
                   Adobe, Cursor, CSS, HTML, Figma, GitHub, Google Material,
                   Jira, Trello, Asana, Microsoft Fluent, n8n, OpenAI, Webflow
                 </p>
               </div>
 
               <div>
-                <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
-                  Education
-                </h3>
-                <p className="leading-relaxed text-black mt-1">
+                <h3 className="font-normal tracking-[0.25%]">Education</h3>
+                <p className="mt-1">
                   Board Infinity — AI Integrated Design, Google Career — UX
                   Design, Seattle Central College — Web Design, University of
                   Illinois at Chicago — Graphic Design
@@ -148,12 +149,12 @@ export default function ExperiencePage() {
           </div>
 
           {/* RIGHT EMPTY COLUMN */}
-          <div className="p-[64px]"></div>
+          <div className="p-[16px] md:p-[32px] lg:p-[64px]"></div>
         </div>
       </Container>
 
-      {/* RESPONSIVE GAP BELOW EXPERTISE */}
-      <div className="mb-[32px] md:mb-[64px]" />
+      {/* DESKTOP‑ONLY GAP BELOW EXPERTISE */}
+      <div className="hidden md:block md:mb-[64px]" />
 
       <Footer />
     </>

@@ -16,9 +16,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="py-[56px]">
+    <header className="py-[16px] md:py-[32px] lg:py-[64px]">
       <Container>
-        <div className="flex w-full items-center justify-between px-[64px]">
+        <div className="flex w-full items-center justify-between px-[16px] md:px-[32px] lg:px-[64px]">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo_mmpd.png"

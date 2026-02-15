@@ -1,9 +1,7 @@
 export default function ExperienceHeroLeft() {
   return (
     <div>
-      <h1 className="text-[60px] leading-[76px] font-light tracking-[0.5%] text-black mb-6 font-['Roboto']">
-        Hello,
-      </h1>
+      <h1 className="text-[60px] leading-[76px] font-light tracking-[0.5%] text-black mb-6 font-['Roboto']"></h1>
 
       <p className="leading-relaxed mb-6 text-black">
         I’m originally from Chicago, where I studied graphic design at UIC—a
