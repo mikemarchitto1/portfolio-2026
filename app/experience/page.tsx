@@ -19,13 +19,13 @@ export default function ExperiencePage() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* LEFT HERO */}
-          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-yellow-200">
+          <div className="p-[16px] md:p-[32px] lg:p-[64px]">
             <Title>Hello,</Title>
             <ExperienceHeroLeft />
           </div>
 
           {/* RIGHT HERO */}
-          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-pink-200">
+          <div className="p-[16px] md:p-[32px] lg:p-[64px]">
             <ExperienceHeroRight />
           </div>
         </div>
@@ -35,12 +35,12 @@ export default function ExperiencePage() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* BUTTON — mobile above experience, desktop right */}
-          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-green-200 md:order-2 flex justify-start md:justify-center">
+          <div className="mt-6 p-[16px] md:p-[32px] lg:p-[64px] md:order-2 flex justify-start md:justify-center">
             <ExperienceResumeButton />
           </div>
 
           {/* EXPERIENCE */}
-          <div className="p-[16px] md:p-[32px] lg:p-[64px] bg-blue-200 md:order-1">
+          <div className="p-[16px] md:p-[32px] lg:p-[64px] md:order-1">
             <Title>Experience</Title>
 
             <div className="mt-[40px] flex flex-col gap-[40px]">
@@ -105,14 +105,14 @@ export default function ExperiencePage() {
       {/* EXPERTISE SECTION */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* LEFT COLUMN — NO bottom padding */}
+          {/* LEFT COLUMN — restored bottom padding */}
           <div
             className="
-            pt-[16px] md:pt-[32px] lg:pt-[64px]
-            px-[16px] md:px-[32px] lg:px-[64px]
-            pb-0
-            bg-yellow-200
-          "
+              pt-[16px] md:pt-[32px] lg:pt-[64px]
+              px-[16px] md:px-[32px] lg:px-[64px]
+              pb-[16px] md:pb-[32px] lg:pb-[64px]
+
+            "
           >
             <Title>Expertise</Title>
 
@@ -120,20 +120,21 @@ export default function ExperiencePage() {
               <div>
                 <h3 className="font-normal tracking-[0.25%]">Skills</h3>
                 <p className="mt-1">
-                  Accessibility, AI Agent Design, Analytics, Design Systems,
-                  Design Thinking, Information Architecture, Interaction Design,
-                  Mobile Design, Problem Solving, Prototyping, RAG Pipelines,
-                  Responsive Web, Stakeholder Engagement, Usability Testing, UX
-                  Design, UX Research, Vibe Coding, Visual Design, Wireframing,
-                  Workflow Automation
+                  Accessibility, AI Agents, Analytics, Architecture,Component
+                  Design, Debugging, Design Systems, Design Thinking, Frontend,
+                  Information Architecture, Interaction Design, Problem Solving,
+                  Prototyping, RAG, Responsive Design, Research, Stakeholder
+                  Managment, Testing, UX Design, Vibe Coding, Visual Design,
+                  Wireframing, Workflow Automation
                 </p>
               </div>
 
               <div>
                 <h3 className="font-normal tracking-[0.25%]">Tools</h3>
                 <p className="mt-1">
-                  Adobe, Cursor, CSS, HTML, Figma, GitHub, Google Material,
-                  Jira, Trello, Asana, Microsoft Fluent, n8n, OpenAI, Webflow
+                  Adobe, Asana, CSS, Cursor, Figma, Fluent, GitHub, HTML, Jira,
+                  Material Design, n8n, Next.js, Node, OpenAI, React, Tailwind,
+                  Trello, TypeScript, Vercel, Webflow
                 </p>
               </div>
 
