@@ -18,23 +18,26 @@ export default function ExperiencePage() {
       {/* HERO SECTION */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* LEFT HERO */}
           <div className="p-[64px] bg-yellow-200">
             <ExperienceHeroLeft />
           </div>
 
-          {/* RIGHT HERO */}
           <div className="p-[64px] bg-pink-200">
             <ExperienceHeroRight />
           </div>
         </div>
       </Container>
 
-      {/* EXPERIENCE SECTION */}
+      {/* EXPERIENCE + BUTTON SECTION */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* LEFT COLUMN — MATCHES HELLO */}
-          <div className="p-[64px] bg-blue-200">
+          {/* BUTTON */}
+          <div className="p-[64px] bg-green-200 md:order-2 flex justify-start md:justify-center">
+            <ExperienceResumeButton />
+          </div>
+
+          {/* EXPERIENCE */}
+          <div className="p-[64px] bg-blue-200 md:order-1">
             <Title>Experience</Title>
 
             <div className="mt-[40px] flex flex-col gap-[40px]">
@@ -86,11 +89,9 @@ export default function ExperiencePage() {
                   <p className="text-base font-medium text-black mb-[12px]">
                     {job.period}
                   </p>
-
                   <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
                     {job.title}
                   </h3>
-
                   <p className="leading-relaxed text-black mt-1">
                     {job.description}
                   </p>
@@ -98,22 +99,17 @@ export default function ExperiencePage() {
               ))}
             </div>
           </div>
-
-          {/* RIGHT COLUMN — BUTTON */}
-          <div className="py-[80px] px-[64px] flex items-start md:items-top justify-start md:justify-center bg-green-200">
-            <ExperienceResumeButton />
-          </div>
         </div>
       </Container>
 
       {/* EXPERTISE SECTION */}
-      <Container>
+      <Container className="pb-0">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* LEFT COLUMN — MATCHES HELLO */}
+          {/* LEFT COLUMN */}
           <div className="p-[64px] bg-yellow-200">
             <Title>Expertise</Title>
 
-            <div className="mt-[40px] flex flex-col gap-[40px] mb-64px">
+            <div className="mt-[40px] flex flex-col gap-[40px]">
               <div>
                 <h3 className="font-['Roboto'] font-normal text-[34px] leading-[48px] tracking-[0.25%] text-black">
                   Skills
@@ -155,6 +151,9 @@ export default function ExperiencePage() {
           <div className="p-[64px]"></div>
         </div>
       </Container>
+
+      {/* RESPONSIVE GAP BELOW EXPERTISE */}
+      <div className="mb-[32px] md:mb-[64px]" />
 
       <Footer />
     </>
