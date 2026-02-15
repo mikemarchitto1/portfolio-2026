@@ -6,7 +6,6 @@ export interface ProjectCardProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
-  /** Large: full-width image, title left / description right. Small: half-width, stacked. */
   variant: "large" | "small";
   href?: string;
 }
@@ -20,14 +19,31 @@ export default function ProjectCard({
   href,
 }: ProjectCardProps) {
   const content = (
-    <>
-      <div className="overflow-hidden">
+    <div className="relative group">
+      {/* EXPANDED OVERLAY */}
+      <div
+        className="
+          absolute
+          -top-6 -left-6 -right-6 -bottom-10
+          bg-black/0
+          transition-colors duration-300
+          group-hover:bg-black/15
+          z-10
+        "
+      />
+
+      {/* IMAGE WRAPPER */}
+      <div className="relative z-0 overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={variant === "large" ? 1328 : 636}
           height={variant === "large" ? 480 : 480}
-          className="h-auto w-full object-cover"
+          className="
+            h-auto w-full object-cover
+            transition-transform duration-300 ease-out
+            group-hover:scale-[1.01]
+          "
           sizes={
             variant === "large"
               ? "(min-width: 768px) 1328px, 100vw"
@@ -36,14 +52,22 @@ export default function ProjectCard({
         />
       </div>
 
+      {/* TEXT BLOCK */}
       <div
         className={cn(
-          "flex flex-col gap-2 pt-4",
+          "relative z-20 flex flex-col gap-2 pt-4",
           variant === "large" &&
             "md:flex-row md:items-start md:justify-between md:gap-12 md:pt-6",
         )}
       >
-        <h2 className="text-left text-portfolio-black [font-family:var(--font-roboto)] text-[24px] font-normal leading-[32px] tracking-[0.0025em] md:text-[34px] md:leading-[48px]">
+        <h2
+          className="
+            text-left text-portfolio-black
+            [font-family:var(--font-roboto)]
+            text-[24px] font-normal leading-[32px] tracking-[0.0025em]
+            md:text-[34px] md:leading-[48px]
+          "
+        >
           {title}
         </h2>
 
@@ -56,12 +80,12 @@ export default function ProjectCard({
           {description}
         </p>
       </div>
-    </>
+    </div>
   );
 
   if (href) {
     return (
-      <article className="group">
+      <article className="group relative">
         <a
           href={href}
           className="block text-portfolio-black no-underline focus:outline-none focus:ring-2 focus:ring-portfolio-blue"
@@ -72,5 +96,5 @@ export default function ProjectCard({
     );
   }
 
-  return <article>{content}</article>;
+  return <article className="group relative">{content}</article>;
 }

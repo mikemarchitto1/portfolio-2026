@@ -3,17 +3,29 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Container from "@/components/container";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/#projects", label: "Projects" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#connect", label: "Connect" },
+  { href: "/#projects", label: "Projects", key: "projects" },
+  { href: "/#experience", label: "Experience", key: "experience" },
+  { href: "/#connect", label: "Connect", key: "connect" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Determine active section based on route
+  const activeKey =
+    pathname === "/"
+      ? "projects"
+      : pathname === "/experience"
+        ? "experience"
+        : pathname === "/connect"
+          ? "connect"
+          : null;
 
   return (
     <header className="py-[16px] md:py-[32px] lg:py-[64px]">
@@ -31,11 +43,16 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex gap-12 items-center">
-            {NAV_LINKS.map(({ href, label }) => (
+            {NAV_LINKS.map(({ href, label, key }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-[16px] font-medium text-portfolio-black hover:underline"
+                className={`
+                  text-[16px]
+                  ${activeKey === key ? "font-semibold" : "font-normal"}
+                  text-portfolio-black
+                  hover:underline
+                `}
               >
                 {label}
               </Link>
