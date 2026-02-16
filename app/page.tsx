@@ -1,4 +1,5 @@
-// app/page.tsx
+"use client";
+
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import ProjectCard from "@/components/project-card";
@@ -13,6 +14,7 @@ const PROJECTS = [
     imageSrc: "/images/home_glorifi.png",
     imageAlt: "GloriFi project",
     variant: "large" as const,
+    href: "/glorifi",
   },
   {
     title: "Microsoft HITS",

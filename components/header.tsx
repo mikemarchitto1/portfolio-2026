@@ -8,16 +8,15 @@ import Container from "@/components/container";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/#projects", label: "Projects", key: "projects" },
-  { href: "/#experience", label: "Experience", key: "experience" },
-  { href: "/#connect", label: "Connect", key: "connect" },
+  { href: "/", label: "Projects", key: "projects" },
+  { href: "/experience", label: "Experience", key: "experience" },
+  { href: "/connect", label: "Connect", key: "connect" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Determine active section based on route
   const activeKey =
     pathname === "/"
       ? "projects"
