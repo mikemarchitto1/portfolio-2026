@@ -29,6 +29,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (typeof window === "undefined") {
+    console.log("[RootLayout] Rendering on server");
+  }
+
   return (
     <html lang="en">
       <body

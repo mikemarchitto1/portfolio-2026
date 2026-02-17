@@ -7,6 +7,12 @@ import Container from "@/components/container";
 import ProjectCard from "@/components/project-card";
 
 export default function EddieBauerPage() {
+  if (typeof window === "undefined") {
+    console.log(
+      "[EddieBauerPage] Server-side render - /eddie-bauer route is accessible",
+    );
+  }
+
   return (
     <>
       <Header />

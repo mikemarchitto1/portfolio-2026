@@ -46,6 +46,10 @@ const PROJECTS = [
 export default function Home() {
   const [glorifi, microsoft, eddie, silverback] = PROJECTS;
 
+  if (typeof window === "undefined") {
+    console.log("[Home] Server-side render");
+  }
+
   return (
     <div className="min-h-screen bg-portfolio-white text-portfolio-black">
       <Header />
