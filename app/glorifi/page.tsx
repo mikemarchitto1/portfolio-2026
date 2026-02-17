@@ -204,7 +204,7 @@ export default function GlorifiPage() {
 
                 <div className="md:col-span-8">
                   <Image
-                    src="/images/desktop_glorifi_design system.png"
+                    src="/images/desktop_glorifi_design-system.png"
                     alt="GloriFi design system"
                     width={1328}
                     height={720}
@@ -251,7 +251,7 @@ export default function GlorifiPage() {
               <div className="grid grid-cols-1 md:grid-cols-12 gap-[32px] md:gap-[48px]">
                 <div className="md:col-span-8">
                   <Image
-                    src="/images/desktop_glorifi_ui exploration.png"
+                    src="/images/desktop_glorifi_ui-exploration.png"
                     alt="UI exploration for GloriFi"
                     width={1328}
                     height={720}
@@ -421,7 +421,7 @@ export default function GlorifiPage() {
                     imageSrc="/images/home_eddie%20bauer.png"
                     imageAlt="Eddie Bauer outdoors"
                     variant="small"
-                    href="/eddie bauer"
+                    href="/eddie-bauer"
                   />
                 </div>
               </div>

@@ -1,0 +1,6 @@
+[00:00:00.501] Server  LOG     ✓ Ready in 360ms
+[00:00:02.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.530] Browser WARN    Image with src "http://localhost:3000/images/logo_slogan.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:08.970] Browser WARN    Image with src "/images/desktop_glorifi_hero.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:19.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

@@ -21,14 +21,16 @@ const PROJECTS = [
     imageSrc: "/images/home_microsoft.png",
     imageAlt: "Microsoft HITS collaboration",
     variant: "small" as const,
+    href: "/microsoft-hits",
   },
   {
     title: "Eddie Bauer",
     description:
       "Redesigned website with custom iconography product-focused visuals, and a more intuitive shopping experience.",
-    imageSrc: "/images/home_eddie%20bauer.png",
+    imageSrc: "/images/home_eddie-bauer.png",
     imageAlt: "Eddie Bauer outdoors",
     variant: "small" as const,
+    href: "/eddie-bauer",
   },
   {
     title: "Silverback MMA",
@@ -37,6 +39,7 @@ const PROJECTS = [
     imageSrc: "/images/home_silverback.png",
     imageAlt: "Silverback MMA",
     variant: "large" as const,
+    href: "/silverback-mma",
   },
 ];
 
