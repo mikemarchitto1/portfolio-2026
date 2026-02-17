@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Container from "@/components/container";
 import ProjectCard from "@/components/project-card";
 
-export default function GlorifiPage() {
+export default function SilverbackMMAPage() {
   return (
     <>
       <Header />
@@ -18,7 +18,7 @@ export default function GlorifiPage() {
             <div className="p-[16px] md:p-[32px] lg:p-[64px]">
               {/* PAGE TITLE */}
               <h1 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                GloriFi
+                Silverback MMA
               </h1>
 
               {/* META BLOCK */}
@@ -28,7 +28,7 @@ export default function GlorifiPage() {
                     Industry
                   </h3>
                   <p className="mt-[4px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    Fintech
+                    Fitness & Sports
                   </p>
                 </div>
 
@@ -37,7 +37,7 @@ export default function GlorifiPage() {
                     Project
                   </h3>
                   <p className="mt-[4px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    Mobile App and Website
+                    Brand Identity & Website
                   </p>
                 </div>
 
@@ -46,7 +46,7 @@ export default function GlorifiPage() {
                     When
                   </h3>
                   <p className="mt-[4px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    2022
+                    2020
                   </p>
                 </div>
 
@@ -55,7 +55,7 @@ export default function GlorifiPage() {
                     Role
                   </h3>
                   <p className="mt-[4px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    UX/UI Design
+                    Brand & Web Design
                   </p>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export default function GlorifiPage() {
               {/* HERO IMAGE */}
               <div className="mt-[32px] md:mt-[48px]">
                 <Image
-                  src="/images/desktop_glorifi_hero.png"
-                  alt="GloriFi mobile banking app hero screens"
+                  src="/images/home_silverback.png"
+                  alt="Silverback MMA brand identity and website"
                   width={1328}
                   height={720}
                   className="w-full h-auto object-cover"
@@ -87,11 +87,9 @@ export default function GlorifiPage() {
                     Situation
                   </h3>
                   <p className="mt-[8px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    GloriFi’s goal is to offer a functional financial banking
-                    app that focuses on financial wellness information via their
-                    mobile and web application. The timeline is to launch a beta
-                    and MVP application in eight months to validate market
-                    interest and secure more funding.
+                    Silverback MMA needed a complete brand identity and website
+                    to establish their presence in the competitive mixed martial
+                    arts training market and attract new students.
                   </p>
                 </div>
 
@@ -100,11 +98,10 @@ export default function GlorifiPage() {
                     Task
                   </h3>
                   <p className="mt-[8px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    Design a global financial news feed and data‑insights hub
-                    that delivers real‑time information and engages U.S.
-                    cultural and financial communities. The experience needs to
-                    reflect trust, security, and privacy while supporting
-                    account creation and interaction with financial content.
+                    Design the full brand identity and website for a mixed
+                    martial arts training program, building a cohesive visual
+                    system and digital experience that reflects strength,
+                    discipline, and community.
                   </p>
                 </div>
 
@@ -113,55 +110,74 @@ export default function GlorifiPage() {
                     Result
                   </h3>
                   <p className="mt-[8px] text-[16px] leading-[24px] text-portfolio-black/80">
-                    Following the initial release, which involved a successful
-                    launch of the app, it was reported that more than 40,000
-                    individuals had downloaded the application, which was a
-                    significant achievement, as it ranked 11th among all
-                    financial apps available on the market.
+                    Successfully created a powerful brand identity and engaging
+                    website that helped Silverback MMA establish a strong market
+                    presence and attract a growing community of students and
+                    practitioners.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* EMPATHIZE */}
+          {/* PROCESS */}
           <section>
             <div className="p-[16px] md:p-[32px] lg:p-[64px] space-y-[48px]">
               <h2 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                Empathize
+                Process
               </h2>
 
-              {/* Competitive Audit */}
+              {/* Brand Research */}
               <div className="space-y-[16px]">
                 <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Competitive Audit
+                  Brand Research
                 </h3>
                 <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Analyzed competitor apps to identify strengths, weaknesses,
-                  and opportunities for differentiation. Focused on user
-                  interface, navigation, and feature offerings.
+                  Conducted market research to understand the MMA training
+                  landscape, competitor analysis, and target audience
+                  preferences to inform the brand strategy.
                 </p>
                 <Image
-                  src="/images/desktop_glorifi_audit.png"
-                  alt="Competitive audit for GloriFi"
+                  src="/images/desktop_silverback_research.png"
+                  alt="Silverback MMA brand research"
                   width={1328}
                   height={720}
                   className="w-full h-auto object-cover"
                 />
               </div>
 
-              {/* Empathy Map */}
+              {/* Logo and Identity Design */}
               <div className="space-y-[16px]">
                 <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Empathy Map and User Interviews
+                  Logo and Identity Design
                 </h3>
                 <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Conducted user interviews and created empathy maps to
-                  understand user needs, behaviors, and pain points.
+                  Created a comprehensive brand identity system including logo,
+                  typography, color palette, and visual elements that convey
+                  strength, discipline, and the spirit of martial arts.
                 </p>
                 <Image
-                  src="/images/desktop_glorifi_personas.png"
-                  alt="Empathy maps and user personas"
+                  src="/images/desktop_silverback_identity.png"
+                  alt="Silverback MMA brand identity"
+                  width={1328}
+                  height={720}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Website Design */}
+              <div className="space-y-[16px]">
+                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
+                  Website Design
+                </h3>
+                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
+                  Designed a responsive website that showcases the brand
+                  identity, training programs, instructor profiles, and class
+                  schedules while providing an engaging user experience.
+                </p>
+                <Image
+                  src="/images/desktop_silverback_website.png"
+                  alt="Silverback MMA website design"
                   width={1328}
                   height={720}
                   className="w-full h-auto object-cover"
@@ -170,25 +186,64 @@ export default function GlorifiPage() {
             </div>
           </section>
 
-          {/* DEFINE */}
+          {/* KEY ELEMENTS */}
           <section>
             <div className="p-[16px] md:p-[32px] lg:p-[64px] space-y-[48px]">
               <h2 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                Define
+                Key Elements
               </h2>
 
+              {/* Logo Design */}
               <div className="space-y-[16px]">
                 <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Design System
+                  Logo Design
                 </h3>
                 <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Developed a design system to ensure consistency across the
-                  app. Included typography, color palette, iconography, and
-                  components.
+                  Designed a powerful logo that combines the strength of a
+                  silverback gorilla with the discipline of martial arts,
+                  creating a memorable and impactful brand mark.
                 </p>
                 <Image
-                  src="/images/desktop_glorifi_design system.png"
-                  alt="GloriFi design system"
+                  src="/images/desktop_silverback_logo.png"
+                  alt="Silverback MMA logo design"
+                  width={1328}
+                  height={720}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Brand Assets */}
+              <div className="space-y-[16px]">
+                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
+                  Brand Assets
+                </h3>
+                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
+                  Created comprehensive brand assets including business cards,
+                  apparel designs, signage, and promotional materials that
+                  maintain brand consistency across all touchpoints.
+                </p>
+                <Image
+                  src="/images/desktop_silverback_assets.png"
+                  alt="Silverback MMA brand assets"
+                  width={1328}
+                  height={720}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Website Features */}
+              <div className="space-y-[16px]">
+                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
+                  Website Features
+                </h3>
+                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
+                  Implemented key website features including class schedules,
+                  instructor profiles, student testimonials, photo galleries,
+                  and easy contact forms to enhance user engagement.
+                </p>
+                <Image
+                  src="/images/desktop_silverback_features.png"
+                  alt="Silverback MMA website features"
                   width={1328}
                   height={720}
                   className="w-full h-auto object-cover"
@@ -197,145 +252,20 @@ export default function GlorifiPage() {
             </div>
           </section>
 
-          {/* IDEATE */}
-          <section>
-            <div className="p-[16px] md:p-[32px] lg:p-[64px] space-y-[48px]">
-              <h2 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                Ideate
-              </h2>
-
-              {/* Wireframe */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Wireframe
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Created wireframes to visualize layout and structure of key
-                  screens. Focused on user flow and information hierarchy.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_wireframe.png"
-                  alt="Wireframes for GloriFi"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              {/* UI Exploration */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  UI Exploration
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Explored different UI styles and interactions to find the best
-                  fit for the brand and user needs.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_ui exploration.png"
-                  alt="UI exploration for GloriFi"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* DESIGN */}
-          <section>
-            <div className="p-[16px] md:p-[32px] lg:p-[64px] space-y-[48px]">
-              <h2 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                Design
-              </h2>
-
-              {/* Today */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Feature: Today
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Dashboard with personalized insights, news, and quick access
-                  to key features.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_today.png"
-                  alt="GloriFi Today feature"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              {/* Snapshot */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Feature: Snapshot
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Overview of account balances, recent transactions, and
-                  financial health.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_snapshot.png"
-                  alt="GloriFi Snapshot feature"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              {/* Rewards */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Feature: Rewards
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Access to exclusive offers and rewards based on user activity.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_rewards.png"
-                  alt="GloriFi Rewards feature"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              {/* Accounts */}
-              <div className="space-y-[16px]">
-                <h3 className="[font-family:var(--font-roboto)] font-normal text-[34px] leading-[48px] tracking-[0.0025em] text-portfolio-black">
-                  Feature: Accounts
-                </h3>
-                <p className="text-[16px] leading-[24px] text-portfolio-black/80 max-w-3xl">
-                  Manage multiple accounts with detailed views and transaction
-                  history.
-                </p>
-                <Image
-                  src="/images/desktop_glorifi_accounts.png"
-                  alt="GloriFi Accounts feature"
-                  width={1328}
-                  height={720}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* NEXT PROJECT */}
+          {/* BACK TO HOME */}
           <section>
             <div className="p-[16px] md:p-[32px] lg:p-[64px] space-y-[40px]">
               <h2 className="[font-family:var(--font-roboto)] font-light text-[60px] leading-[76px] tracking-[-0.005em] text-portfolio-black">
-                Next Project
+                Back to Home
               </h2>
 
               <ProjectCard
-                title="Eddie Bauer"
-                description="End-to-end UX and UI design for a modernized ecommerce experience, from research and wireframes to high-fidelity visuals."
-                imageSrc="/images/desktop_eddiebauer_hero.png"
-                imageAlt="Eddie Bauer ecommerce experience"
+                title="GloriFi"
+                description="Led end-to-end UX for FinTech products, from wireframes and prototypes to hi-fidelity screens and a unified design system."
+                imageSrc="/images/home_glorifi.png"
+                imageAlt="GloriFi project"
                 variant="large"
-                href="/eddiebauer"
+                href="/glorifi"
               />
             </div>
           </section>

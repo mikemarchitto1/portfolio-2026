@@ -421,7 +421,7 @@ export default function GlorifiPage() {
                     imageSrc="/images/home_eddie%20bauer.png"
                     imageAlt="Eddie Bauer outdoors"
                     variant="small"
-                    href="/eddiebauer"
+                    href="/eddie bauer"
                   />
                 </div>
               </div>
